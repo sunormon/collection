@@ -27,6 +27,7 @@ public class TestController {
 //        System.out.println(dataSource.getConnection().toString());
         log.info("数据库连接",dataSource.getConnection().toString());
         List<SysConfig> list = service.queryAll();
+
         return new ResponseEntity<>(list, HttpStatus.OK);
     }
 }
