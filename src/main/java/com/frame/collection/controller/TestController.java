@@ -24,8 +24,8 @@ public class TestController {
 
     @RequestMapping(value = "/hello")
     public ResponseEntity<Object> show() throws SQLException {
-//        System.out.println(dataSource.getConnection().toString());
-        log.info("数据库连接",dataSource.getConnection().toString());
+        System.out.println(dataSource.getConnection().toString());
+//        log.info("数据库连接",dataSource.getConnection().toString());
         List<SysConfig> list = service.queryAll();
         System.out.println(dataSource.getConnection().toString());
         return new ResponseEntity<>(list, HttpStatus.OK);
